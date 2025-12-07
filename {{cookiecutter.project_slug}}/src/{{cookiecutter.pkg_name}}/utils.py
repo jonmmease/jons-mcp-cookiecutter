@@ -49,7 +49,6 @@ def apply_pagination(
     end_idx = min(start_idx + limit, total_items)
     paginated = items[start_idx:end_idx]
 
-    # Add offset field to each item if requested
     result_items: list[T | dict[str, Any]]
     if add_offset_field:
         processed_items: list[dict[str, Any]] = []

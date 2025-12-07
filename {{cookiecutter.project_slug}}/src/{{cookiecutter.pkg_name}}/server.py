@@ -48,8 +48,6 @@ def signal_handler(signum: int, frame: Any) -> None:
 
 
 def main() -> None:
-    """Main entry point for the MCP server."""
-    # Parse command line arguments
     parser = argparse.ArgumentParser(
         description="{{ cookiecutter.description }}"
     )
@@ -60,17 +58,14 @@ def main() -> None:
     )
     args = parser.parse_args()
 
-    # Log startup info
     if args.project_path:
         logger.info(f"Starting server with project path: {args.project_path}")
     else:
         logger.info("Starting server with current directory")
 
-    # Register signal handlers
     signal.signal(signal.SIGINT, signal_handler)
     signal.signal(signal.SIGTERM, signal_handler)
 
-    # Run the MCP server
     mcp.run()
 
 

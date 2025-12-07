@@ -5,7 +5,6 @@ from pathlib import Path
 
 import pytest
 
-# Add src directory to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 
@@ -25,11 +24,9 @@ def temp_project(tmp_path: Path) -> Path:
     Returns:
         Path to the temporary project directory
     """
-    # Create a basic project structure
     src_dir = tmp_path / "src"
     src_dir.mkdir()
 
-    # Create a sample Python file
     sample_file = src_dir / "main.py"
     sample_file.write_text('"""Sample module."""\n\ndef hello() -> str:\n    return "Hello"\n')
 

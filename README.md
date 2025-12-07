@@ -104,7 +104,7 @@ To modify this template:
 
 ```
 jons-mcp-cookiecutter/
-├── INSTRUCTIONS.md              # This file (not copied to output)
+├── README.md                    # This file (not copied to output)
 ├── cookiecutter.json            # Template variable definitions
 └── {{cookiecutter.project_slug}}/   # Template directory
     ├── .gitignore
