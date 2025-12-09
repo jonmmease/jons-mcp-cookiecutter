@@ -77,7 +77,7 @@ uv run pytest
 
 ```bash
 cd my-mcp-server
-claude mcp add my-mcp-server -- uv run --directory "$(pwd)" my-mcp-server
+claude mcp add my-mcp-server -- uv run --project "$(pwd)" my-mcp-server
 ```
 
 ## What's Included
